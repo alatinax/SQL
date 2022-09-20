@@ -1,0 +1,19 @@
+CREATE TABLE Store (id INTEGER PRIMARY KEY, Name TEXT, Contains INTEGER, Benefits TEXT, Cost INTEGER);
+
+INSERT INTO Store VALUES (1, 'Green Tea', '10 bags', 'Weight Loss', 10);
+INSERT INTO Store VALUES (2, 'Chamomile Tea', '20 bags', 'Reduces Stress', 10);
+INSERT INTO Store VALUES (3, 'Black Tea', '10 bags', 'Regulates Glucose', 20);
+INSERT INTO Store VALUES (4, 'Chai Tea', '5 bags', 'Smoother Digestion', 15);
+INSERT INTO Store VALUES (5, 'Hibiscus Tea', '20 bags', 'Prevents Hypertension', 25);
+INSERT INTO Store VALUES (6, 'Ginger Tea', '15 bags', 'Cold Remedy', 20);
+INSERT INTO Store VALUES (7, 'Peppermint Tea', '5 bags', 'Reduces Cramping and Nausea', 10);
+INSERT INTO Store VALUES (8, 'Matcha Tea', '15 bags', 'Burns Fat', 20);
+INSERT INTO Store VALUES (9, 'Jasmine Tea', '10 bags', 'Improves Immune System', 25);
+INSERT INTO Store VALUES (10, 'Darjeeling Tea', '10 bags', 'Provides Antioxidants', 30);
+INSERT INTO Store VALUES (11, 'Oolong Tea', '8 bags', 'Boosts Metabolism', 15);
+INSERT INTO Store VALUES (12, 'Mint Tea', '10 bags', 'Reduces Bloating', 10);
+INSERT INTO Store VALUES (13, 'White Tea', '10 bags', 'Detox', 45);
+INSERT INTO Store VALUES (14, 'Nettle Tea', '6 bags', 'Promotes Iron', 25);
+INSERT INTO Store VALUES (15, 'Fennel Tea', '15 bags', 'Cleans Kidneys', 25);
+
+SELECT * from Store;
