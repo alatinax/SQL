@@ -1,0 +1,70 @@
+CREATE TABLE Florida_Panthers_Top_20_Players_2021_2022(
+     id INTEGER PRIMARY KEY,
+     Name TEXT,
+     Draft_Year INTEGER,
+     Position TEXT,
+     Total_Goals INTEGER);
+     
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Jonathan Huberdeau', 2011, 'Left Wing', 30);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Aleksander Barkov', 2013, 'Center', 39);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Sam Reinhart', 2014, 'Right Winger', 33);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Anthony Duclair', 2020, 'Right Winger', 31);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Aaron Ekblad', 2014, 'Defenseman', 15);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Carter Verhaeghe', 2020, 'Center', 24);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Sam Bennett', 2020, 'Center', 28);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Mason Marchment', 2020, 'Left Wing', 18);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Anton Lundell', 2020, 'Center', 18);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Mackenzie Weegar', 2016, 'Defenseman', 8);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Brandon Montour', 2020, 'Defenseman', 11);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Gustav Forsling', 2020, 'Defenseman', 10);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Patric Hornqvist', 2020, 'Right Winger', 11);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Eetu Luostarinen', 2020, 'Center', 9);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Claude Giroux', 2021, 'Center', 3);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Frank Vatrano', 2017, 'Right Winger', 10);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Ryan Lomberg', 2020, 'Left Wing', 9);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Radko Gudas', 2020, 'Defenseman', 3);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Maxim Mamin', 2017, 'Right Winger', 7);
+INSERT INTO Florida_Panthers_Top_20_Players_2021_2022(Name, Draft_Year, Position, Total_Goals)
+    VALUES('Owen Tippett', 2017, ' Right Winger', 6);
+    
+SELECT * FROM Florida_Panthers_Top_20_Players_2021_2022
+;
+
+SELECT MAX(Total_Goals) FROM Florida_Panthers_Top_20_Players_2021_2022
+;
+
+SELECT draft_year FROM Florida_Panthers_Top_20_Players_2021_2022 GROUP BY draft_year HAVING draft_year > 2010
+;
+
+SELECT Total_Goals,
+      CASE
+         WHEN Total_Goals > 10 THEN 'within_target'
+         WHEN Total_Goals > MAX(39) THEN 'above_target'
+         
+         ELSE 'below_target'
+         END as 'projected_target'
+FROM Florida_Panthers_Top_20_Players_2021_2022
+;
+
+SELECT COUNT(*) FROM Florida_Panthers_Top_20_Players_2021_2022
+WHERE Draft_Year >= 2020 AND Draft_Year <= 2020
+;
