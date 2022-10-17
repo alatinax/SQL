@@ -47,3 +47,36 @@ SELECT COUNT(customers.acctnum),
     LEFT JOIN BIT_DB.customers 
     ON FebSales.orderid = customers.order_id
     WHERE FebSales.Quantity > 2;
+    
+#Filtering data by dates
+
+SELECT orderdate
+    FROM BIT_DB.FebSales    
+    WHERE orderdate 
+    BETWEEN '02/13/19 00:00' 
+    AND '02/18/19 00:00';
+    
+SELECT location         
+    FROM BIT_DB.FebSales    
+    WHERE orderdate = '02/18/19 01:35';
+    
+SELECT sum(quantity)
+    FROM BIT_DB.FebSales
+    WHERE orderdate 
+    LIKE '02/18/19%';
+    
+SELECT DISTINCT product 
+    FROM BIT_DB.FebSales
+    WHERE product     
+    LIKE '%Batteries%';
+    
+SELECT DISTINCT product 
+    FROM BIT_DB.FebSales
+    WHERE price 
+    LIKE '%.99';
+    
+SELECT product, sum(quantity)
+    FROM BIT_DB.FebSales
+    WHERE location    
+    LIKE '%Los Angeles%'
+    GROUP BY product;
